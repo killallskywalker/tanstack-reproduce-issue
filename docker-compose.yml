@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    # Uncomment to pass env vars to your frontend build (use with ARG/ENV if needed)
+    # environment:
+    #   VITE_API_BASE_URL: "https://api.example.com"
+
+
